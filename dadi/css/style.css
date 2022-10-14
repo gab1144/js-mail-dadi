@@ -1,5 +1,7 @@
 body{
-  background-color: blue;
+  background-image:url("../img/istockphoto-183819034-612x612.jpg");
+  background-position: center;
+  background-size: contain;
   color: white;
   height: 100vh;
   display: flex;
@@ -14,7 +16,7 @@ input {
 }
 
 .custom-container{
-  background-color: rgb(66, 66, 206);
+  background-color: rgba(0, 0, 0, 0.555);
   text-align: center;
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, .5);
