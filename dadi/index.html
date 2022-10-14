@@ -18,26 +18,31 @@
 
   <div class="container custom-container">
     <div class="row">
-    
       <div class="col d-flex flex-column align-content-center justify-content-center">
         <div class="continer-fluid">
-          <div class="row">
+          <div class="row gy-5">
             <div class="col-12">
-              <button type="button" class="btn bg-light" id="bottone">Gioca</button>
+              <h1>Gioco dei dadi</h1>
+              <button type="button" class="btn bg-light" id="new-match">Nuova partita</button>
             </div>
 
             <div class="col-6">
               <h2>Utente</h2>
-              <span class="d-block rounded" id="n-utente"></span>
+              <button type="button" class="btn bg-light d-none" id="lancio-utente">Lancia</button>
+              <div>
+                <span class="d-none rounded bg-light" id="n-utente"></span>
+              </div>
             </div>
 
             <div class="col-6">
               <h2>PC</h2>
-              <span class="d-block rounded" id="n-pc"></span>
+              <div>
+                <span class="d-none rounded bg-light" id="n-pc"></span>
+              </div>
             </div>
 
             <div class="col-12">
-              <span id="esito"></span>
+              <span id="esito" class="d-none"></span>
             </div>
 
           </div>
