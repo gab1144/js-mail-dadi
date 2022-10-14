@@ -6,25 +6,33 @@ const emailRegistrate = [
   "giulia@gmail.com", 
   "franco@gmail.com"
 ];
-const button = document.getElementById('bottone');
-let emailInput;
-let trovato;
-let output;
+const button = document.getElementById('accedi');
+let emailInput, trovato, output;
 
 button.addEventListener('click', function(){
-  trovato=false;
   emailInput = document.getElementById('email-input').value;
-  for (let i=0; i < emailRegistrate.length; i++) {
-    if (emailRegistrate[i] === emailInput)
-    trovato = true;
-  }
+  if (emailInput !== ""){
+    trovato=false;
+    for (let i=0; i < emailRegistrate.length; i++) {
+      if (emailRegistrate[i] === emailInput)
+      trovato = true;
+    }
 
-  if (trovato) {
-    output="Accesso consentito";
+    if (trovato) {
+      output="Accesso consentito";
+    } else {
+      output="Email non trovata: accesso non consentito";
+    }
+
+    document.getElementById('output').innerHTML = output;
+    document.getElementById('output').classList.remove('d-none');
   } else {
-    output="Email non trovata: accesso non consentito";
+    alert("Devi inserire un'email per poter effettuare l'accesso")
   }
+  
+});
 
-  document.getElementById('output').innerHTML = output;
-  ticketBox.classList.remove('hide');
+reset.addEventListener('click', function(){
+  document.getElementById('email-input').value="";
+  document.getElementById('output').classList.add('d-none');
 });
